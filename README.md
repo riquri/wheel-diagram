@@ -17,9 +17,7 @@ Plot wheel diagram for alpha-helix.
 Copy plot_wheel_diagram.py to wherever you like.
  
 # Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
+  
 ```bash
 python plot_wheel_diagram.py SEQUENCE
 ```
