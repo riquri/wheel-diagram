@@ -2,7 +2,7 @@
 Plot wheel diagram for alpha-helix.
 
 # DEMO
-Demonstration for a sequence "LEQLEQDCNDICERMKNVEKDFSN" from formin Fus1 in Schizosaccharomyces pombe.
+Demonstration for a sequence "LEQLEQDCNDICERMKNVEKDFSN" from formin Fus1 in *Schizosaccharomyces pombe*.
 ![Demo](./LEQLEQDC_wheel.png)
  
 # Features
