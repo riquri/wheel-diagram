@@ -2,12 +2,12 @@
 Plot wheel diagram for alpha-helix.
 
 # DEMO
-Demonstration for a sequence "LEQLEQDCNDICERMKNVEKDFSN" from formin Fus1 in *Schizosaccharomyces pombe*.
+Demonstration for a sequence "LEQLEQDCNDICERMKNVEKDFSN" from formin Fus1 in *Schizosaccharomyces pombe*.  
 ![Demo](./LEQLEQDC_wheel.png)
  
 # Features
  
- The Kyte and Doolittle's hydrophobicity is used.
+ The Kyte and Doolittle's hydrophobicity is used.  
  The hydrophobic moment is normalized by the sequence length.
  
 # Requirement (validated version)
@@ -25,7 +25,7 @@ python plot_wheel_diagram.py YOUR_SEQUENCE
 ```
  
 # Note
-  Helvetica is specified for default font.
+  Helvetica is specified for default font.  
   If you have an error, remove font specification.
  
 # Author
