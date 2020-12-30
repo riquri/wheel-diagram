@@ -2,13 +2,14 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body style="box-sizing: border-box;">
   <form>
     Sequence: <input type="text" name="input_sequence" size="60" value="LEQLEQDCNDICERMKNVEKDFSN" />
     <input type="button" value="Submit" onclick="plot_wheel_diagram()" />
   </form>
-  <canvas id="main_canvas" width="500px" height="500px" style="border: 1px solid black;"></canvas>
-  <script>
+  <canvas id="main_canvas" width="500px" height="500px" style="border: 1px solid black; position: absolute; left: 64; top: 64; z-index: 100;"></canvas>
+  <canvas id="under_canvas" width="500px" height="500px" style="border: 1px solid black; position: absolute; left: 64; top: 64; z-index: 50;"></canvas>
+  <script><!--
     function wheel_diagram(seq){
       var result=[];
       const RESIDUES = ["A","L","I","V","F","Y","W","M","C","G","P","N","Q","S","T","H","R","K","D","E", "*"];
@@ -31,6 +32,9 @@
       var ctx = document.getElementById('main_canvas').getContext('2d');
       ctx.clearRect(0, 0, 500, 500);
       
+      var utx = document.getElementById('under_canvas').getContext('2d');
+      utx.fillStyle="#FFFFFF";
+      utx.fillRect(0, 0, 500, 500);
       
       var initial_radius = 128;
       var marker_size = 40;
@@ -51,6 +55,17 @@
         
         current_point = [Math.cos(res[0]*100/180*Math.PI)*(initial_radius+res[1]*marker_size),Math.sin(res[0]*100/180*Math.PI)*(initial_radius+res[1]*marker_size)];
         
+        
+        //Draw line
+        utx.beginPath();
+        utx.strokeStyle="#DDDDDD";
+        utx.fillStyle="#DDDDDD";
+        utx.lineWidth = 3;
+        utx.lineCap = "Round";
+        utx.moveTo(prev_point[0]+250, prev_point[1]+250);
+        utx.lineTo(current_point[0]+250, current_point[1]+250);
+        utx.stroke();
+      
         //Draw circle
         ctx.strokeStyle=color;
         ctx.fillStyle="#FFFFFF";
@@ -81,10 +96,10 @@
       ctx.lineWidth = 0;
       ctx.lineCap = "Round";
       ctx.moveTo(250, 250);
-      ctx.lineTo(250+moment_vec[0]+30, 250+moment_vec[1]+30);
+      ctx.lineTo(250+moment_vec[0], 250+moment_vec[1]);
       ctx.stroke();
       ctx.beginPath () ;
-      ctx.arc(250+moment_vec[0]+30, 250+moment_vec[1]+30, marker_size/10, 0, 2*Math.PI, true);
+      ctx.arc(250+moment_vec[0], 250+moment_vec[1], marker_size/10, 0, 2*Math.PI, true);
       ctx.closePath();
       ctx.fill();
       
@@ -98,7 +113,8 @@
       ctx.font = "bold 21px 'Helvetica Arial'";
       ctx.fillText(Math.round(moment_val * 1000)/1000, 250, 250);
       
-    }    
+    }  
+  -->  
   </script>
 </body>
 </html>
