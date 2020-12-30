@@ -26,8 +26,9 @@ python plot_wheel_diagram.py YOUR_SEQUENCE
  
 # Note
   Helvetica is specified for default font.  
-  If you have an error, remove font specification.
- 
+  If you have an error, remove font specification.  
+  
+  HTML version is available on the index.html.
 # Author
  
 - Rikuri Morita
