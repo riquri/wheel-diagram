@@ -81,7 +81,7 @@ def plot_wheel_diagram(seq):
     plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
     plt.gca().xaxis.set_major_locator(plt.NullLocator())
     plt.gca().yaxis.set_major_locator(plt.NullLocator())
-    plt.savefig(f"{seq[0:8]}_wheel.png", dpi=150,pad_inches = 0)
+    plt.savefig(f"{seq[0:8]}_wheel.png", dpi=300,pad_inches = 0)
 
 
 plot_wheel_diagram(sys.argv[1])
