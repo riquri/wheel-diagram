@@ -23,7 +23,9 @@ Copy plot_wheel_diagram.py to wherever you like.
 ```bash
 python plot_wheel_diagram.py YOUR_SEQUENCE
 ```
- 
+
+Web version is also available [here](https://sites.google.com/view/morita-rikuri/%E3%83%84%E3%83%BC%E3%83%AB/plot-wheel-diagram).
+
 # Note
   Helvetica is specified for default font.  
   If you have an error, remove font specification.  
